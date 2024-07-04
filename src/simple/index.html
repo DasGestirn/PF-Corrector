@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>PF Corrector</title>
+    <style>
+      #form_area {
+        overflow: hidden;
+      }
+    </style>
+    <script type="module" defer src="../scripts/mainsimple.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="title">PF Corrector</div>
+      <div>
+        <a href="/simple/">Correção Simples</a>
+        <a href="https://pfcorrector.netlify.app/">Correção Completa</a>
+      </div>
+    </header>
+    <section id="wrapper_app">
+      <div class="app-areas" id="form_area">
+        <legend>Insira os dados nominais do circuito:</legend>
+        <form id="app-form">
+          <div>
+            <label for="fp_novo">Fator de potência desejado:</label>
+            <input
+              required
+              type="number"
+              step="0.001"
+              min="0"
+              max="1"
+              placeholder="0-1"
+              id="fp_novo"
+              name="fp_novo"
+            />
+          </div>
+          <div>
+            <label for="fp_medido">Fator de potência medido:</label>
+            <input
+              required
+              type="number"
+              step="0.001"
+              min="0"
+              max="1"
+              placeholder="0-1"
+              id="fp_medido"
+              name="fp_medido"
+            />
+          </div>
+          <div>
+            <label for="tensao_de_linha">Tensão de linha (V):</label>
+            <input
+              required
+              type="number"
+              step="0.001"
+              min="0"
+              max="99999"
+              placeholder="0-99999"
+              id="tensao_de_linha"
+              name="tensao_de_linha"
+            />
+          </div>
+          <div>
+            <label for="potencia_aparente"
+              >Potência Aparente medida (kVA):</label
+            >
+            <input
+              required
+              type="number"
+              step="0.001"
+              min="0"
+              max="99999"
+              placeholder="0-99999"
+              id="potencia_aparente"
+              name="potencia_aparente"
+            />
+          </div>
+          <div>
+            <label for="frequencia">Frequência (Hz): </label>
+            <input
+              required
+              type="number"
+              step="0.001"
+              min="0"
+              max="100"
+              placeholder="0-100"
+              id="frequencia"
+              name="frequencia"
+            />
+          </div>
+          <button type="submit" id="form_submit">AVALIAR</button>
+        </form>
+      </div>
+
+      <div class="app-areas" id="interaction_area">
+        <div id="menu">
+          <button class="menu_items dados-btn dados-originais" id="menu_d">
+            DADOS ORIGINAIS DO CIRCUITO
+          </button>
+          <button class="menu_items dados-btn dados-corrigidos" id="menu_c">
+            DADOS CORRIGIDOS DO CIRCUITO
+          </button>
+          <button class="menu_items chart-btn chart-ic" id="menu_ic">
+            I x I CORRIGIDA
+          </button>
+          <button class="menu_items chart-btn chart-ss" id="menu_ss">
+            S x S CORRIGIDA
+          </button>
+        </div>
+        <div id="data_area"></div>
+        <canvas class="hidden" id="graph_area"></canvas>
+      </div>
+      </div>
+    </section>
+    <footer>
+      <span>
+        Desenvolvido como parte do TCC feito por Eduardo Estrela Porto Lima e
+        Guilherme de Santana Soares Xavier no IFBA Campus Salvador. Para mais
+        informações, visite o repositório do projeto:
+        <a href="https://github.com/DasGestirn/PF-Corrector"><i class="bx bxl-github bx-tada-hover"></i></a>
+      </span>
+    </footer>
+  </body>
+</html>

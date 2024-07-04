@@ -1,0 +1,308 @@
+:root{
+    font-size:62.5%;
+}
+
+*,::before,::after {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+    
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    color: white;
+    background-color: #3b82f6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header #title {
+    font-size: clamp(2.4rem, 2.5vw + 1rem, 4rem);
+}
+
+header div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header div a {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header div a:hover {
+    text-decoration: underline 1px;
+}
+    
+#wrapper_app {
+    margin-top: 2rem;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.app-areas {
+    height: 80vh;
+}
+
+/* ESTILOS DO FORMULÁRIO */
+    
+#form_area {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30vw;
+    max-height: calc(80vh + 1rem);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#form_area legend {
+    margin-left: 2rem;
+}
+    
+form > div {
+    width: max-content;
+    height: max-content;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 25vw;
+}
+    
+form > div + div {
+    margin-top: .7rem;
+}
+
+form > button {
+    margin-left: 25%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    transition: .3s;
+}
+
+form > button:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+    cursor: pointer;
+}
+
+form input, form select {
+    border: 2px solid #000000;
+    border-radius: .3em;
+    width: 20vw;
+    height: 2rem;
+    position: relative;
+}
+    
+form input {
+    padding: .8em .3em;
+}
+    
+form input:focus, form select:focus {
+    box-shadow: 5px 5px 4px 0px #727171bf;
+}
+    
+form input:invalid {
+    border-color: darkred;
+}
+
+form input:valid, form select {
+    border-color: #19b229
+}
+
+form input::-webkit-outer-spin-button, form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#form_area::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#form_area::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#form_area::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #3b82f6;
+}
+
+/* ESTILOS DA ÁREA DE INTERAÇÃO DO SITE*/
+
+.hidden {
+    display: none !important;
+}
+    
+#interaction_area {
+    width: 50vw;
+    display: flex;
+    justify-content: baseline;
+    align-content: space-around;
+    flex-direction: column;
+}
+
+#menu {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.75rem;
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+}
+
+#menu .menu_items {
+    width: auto;
+    display: grid;
+    place-items: center;
+    border: 2px solid black;
+}
+
+#menu .menu_items:hover {
+    cursor: pointer;
+    background-color: #c7c7c7;
+}
+
+#display_area , #data_area, #graph_area {
+    width: 100%;
+    height: auto;
+}
+
+#display_area {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#data_area {
+    font-size: 1.8rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 100%;
+}
+
+#data_area .dados {
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dados-originais {
+    width: 100%;
+}
+
+.dados-corrigidos{
+    width: 50%;
+}
+
+#data_area .dados span {
+    align-self: flex-start;
+}
+
+#data_area .dados span + span {
+    margin-top: 2%;
+}
+
+footer {
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:visited {
+    color: black;
+}
+
+footer i {
+    display: inline;
+    font-size: 2.4rem;
+}
+
+/* MEDIA QUERIES */
+
+/* LAYOUT MOBILE */
+@media (max-width: 744px) {
+
+    #wrapper_app {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form_area {
+        width: 100%;
+        max-height: 50vh;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    form > button {
+        margin: 2rem 1% auto -1.7%;
+    }
+
+    #interaction_area {
+        margin-top: 2rem;
+        width: 80%;
+        min-height: max-content;
+    }
+
+    #data_area {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        min-height: max-content;
+    }
+
+    footer {
+        margin-top: 2rem;
+    }
+  }
