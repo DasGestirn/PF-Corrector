@@ -40,6 +40,6 @@ npm run build
 
 ## :pencil: Créditos
 
-A ferramenta foi criada como parte do Trabalho de Conclusão de Curso de Eletrotécnica feito por Eduardo Estrela Porto Lima ([@eduardo-estrela](https://github.com/eduardo-estrela)) e Guilherme de Santana Soares Xavier ([@DasGestirn](https://github.com/DasGestirn)) no IFBA Campus Salvador. A elaboração do estudo necessário ao desenvolvimento da aplicação contou com a orientação do Prof. Dr. Davi Franco Rego.
+A ferramenta foi criada como parte do Trabalho de Conclusão de Curso de Eletrotécnica feito por Eduardo Estrela Porto Lima ([@eduardo-estrela](https://github.com/eduardo-estrela)) e Guilherme de Santana Soares Xavier ([@DasGestirn](https://github.com/DasGestirn)) no IFBA Campus Salvador. A elaboração do estudo necessário ao desenvolvimento da aplicação contou com a orientação do Prof. Dr. Davi Franco Rêgo.
 
 O TCC está disponível para leitura em: https://archive.org/details/tcc-edu-gui-cfp
