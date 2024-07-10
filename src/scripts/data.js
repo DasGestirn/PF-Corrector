@@ -68,7 +68,7 @@ export function InsertSimpleOriginalData(el, motor) {
 export function InsertSimpleCorrectedData(el, motor) {
   const dataHTML = `
             <div class="dados dados-corrigidos" id="dados-corrigidos-motor">
-              <b>CARACTERÍSTICAS ELÉTRICAS DO SISTEMA</b>
+              <b>NOVAS CARACTERÍSTICAS ELÉTRICAS DO SISTEMA:</b>
               <br />
               <span>Corrente nova: <b> ${motor.iNovaMod.toFixed(2)}A</b></span>
               <span>Potência aparente nova: <b> ${(motor.sNovoMod / 1000).toFixed(2)}kVA</b></span>
