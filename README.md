@@ -17,7 +17,7 @@ A aplicação, além de expôr os dados numéricos das características elétric
 Primeiramente, use o próprio Git para clonar o repositório:
 
 ```bash
-git clone PF-Corrector
+git clone https://github.com/DasGestirn/PF-Corrector.git
 ```
 
 Após cloná-lo, use o NPM para instalar todas as ferramentas externas da aplicação:
